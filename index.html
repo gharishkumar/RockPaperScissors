@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" class="m-no-touch">
+  <head>
+    <title>RockPaperScissors</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <div class="rps-wrapper">
+	<br>
+      <div class="name">
+		<b id="name">Provide your name to enter the game:</b><input placeholder="name...." type="text" id="myText" autocomplete="off">
+	  </div>
+	  <div class="events__stats__btn">
+		<span onclick="start()" id="ok" class="events__stats__btn__content">OK</span>
+	  </div>
+      <ul id="events"></ul>
+      <div class="controls">
+        <div class="button-wrapper">
+		<div class="events__stats__btn">
+          <span id="rock" class="turn events__stats__btn__content">Rock 👊</span>
+		</div>
+		<div class="events__stats__btn">
+          <span id="paper" class="turn events__stats__btn__content">Paper 🖐️</span>
+		</div>
+		<div class="events__stats__btn">
+          <span id="scissors" class="turn events__stats__btn__content">Scissors ✌️</span>
+        </div>
+		</div>
+		<!-- <div class="button-wrapper"> -->
+          <!-- <button id="robot" class="turn">Play with robot</button> -->
+        <!-- </div> -->
+      </div>
+      <div class="note">
+	  <strong>NOTE:</strong> Wait for the others to join. Don't refresh..., else you may be paired with yourself. If you are paired with ourself accidentally refresh the page once to continue.....
+	  </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="src/client.js"></script>
+  </body>
+</html>
